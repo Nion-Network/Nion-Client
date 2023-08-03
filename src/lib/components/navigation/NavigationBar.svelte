@@ -20,8 +20,11 @@
         <div id="title">Nion Network</div>
     </div>
     <div id="status-container">
-        <div class="icon" style="mask-image: url('synced.svg')"></div>
-        <div class="text">Synchronised @ {#key $chainStore} <span in:fade>{$chainStore?.slot?.toLocaleString() ?? 0}</span> {/key}</div>
+        <div id="status">
+            <div class="icon" style="mask-image: url('synced.svg')"></div>
+            <div class="text">Synchronised</div>
+        </div>
+        {#key $chainStore} <div in:fade>{$chainStore?.slot?.toLocaleString() ?? 0}</div> {/key}
     </div>
     <div id="buttons-container">
         {#each buttons as button}
@@ -70,16 +73,23 @@
 
     #status-container {
         display: flex;
-        gap: 1rem;
+        flex-direction: column;
+        gap: .5rem;
+        text-align: center;
         background: #FDFC47;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
-    #status-container .icon {
+    #status {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    #status .icon {
         padding: .5rem;
         mask-repeat: no-repeat;
         mask-size: 90%;
@@ -98,6 +108,5 @@
         overflow: hidden;
         width: 80%;
         margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.025);
     }
 </style>

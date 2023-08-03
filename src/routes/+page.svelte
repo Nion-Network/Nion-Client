@@ -31,7 +31,7 @@
 <style>
     #app-container {
         display: grid;
-        grid-template-columns: minmax(15%, 150px) 1fr;
+        grid-template-columns: max(15%, 200px) 1fr;
         grid-template-rows: 1fr;
         height: 100vh;
         font-family: "Helvetica Neue", sans-serif;
