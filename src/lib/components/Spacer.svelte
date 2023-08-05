@@ -1,1 +1,1 @@
-<div style="width: 100%"></div>
+<div style="flex-grow: 1"></div>

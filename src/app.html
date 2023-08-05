@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Borel&family=Inter:wght@300;400&family=Lato:wght@100;300;400;700;900&family=Roboto+Mono:wght@300;400;500&display=swap');
+</style>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%sveltekit.assets%/logo.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    %sveltekit.head%
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">%sveltekit.body%</div>
+</body>
 </html>
 
 <style>
-	body {
-		margin: 0;
-		padding: 0;
-	}
+    :root {
+        --background-color: #060d13;
+        --darker-background-color: #020609;
+        --lighter-background-color: #0F121A;
+
+        --selection-color: rgba(253, 5, 156, 0.51);
+
+        --accent-color: #d6c3ff;
+        --accent-purple-color: #924fff;
+        --accent-pink-color: #ff4b8d;
+        --accent-blue-color: #7F96FF;
+
+        --lightened-color: rgba(255, 255, 255, .05);
+        --darkened-color: rgba(0, 0, 0, .1);
+
+        --primary-text-color: #eaeaea;
+        --secondary-text-color: #c8c8c8;
+        --tertiary-text-color: #a0a0a0;
+
+        --green-color: #00ff5a;
+        --lighter-green-color: #51ff8f;
+        --darker-green-color: #00c344;
+
+        --warning-color: #FA7921;
+        --error-color: #f20005;
+        --success-color: #00de86;
+
+        --border-radius: 3px;
+    }
+
+    [theme="light"] {
+        --background-color: #EBEBEB;
+        --darker-background-color: #ececec;
+        --lighter-background-color: #f4f4f4;
+
+        --selection-color: rgba(117, 5, 253, 0.06);
+
+        --accent-color: #887eff;
+        --accent-purple-color: #6256ff;
+        --accent-pink-color: #E56399;
+        --accent-blue-color: #3081ff;
+
+        --lightened-color: rgba(255, 255, 255, .05);
+        --darkened-color: rgba(0, 0, 0, .1);
+
+        --primary-text-color: rgba(0, 0, 0, 0.89);
+        --secondary-text-color: rgba(75, 75, 75, 0.89);
+        --tertiary-text-color: rgba(150, 150, 150, 0.89);
+
+        --green-color: #B2EF9B;
+        --lighter-green-color: #DAFF7D;
+        --darker-green-color: #368C17;
+
+        --warning-color: #FA7921;
+        --error-color: #f20005;
+        --success-color: #00de86;
+
+        --border-radius: 5px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        transition: all .15s ease-in-out;
+    }
 </style>

@@ -1,17 +1,17 @@
 <script lang="ts">
-    import {ClientView} from "$lib/stores/SettingsStore";
+    import {ClientView, settingsStore} from "$lib/stores/SettingsStore";
     import type {SvelteComponent} from "svelte";
     import type {ChainBlock} from "$lib/stores/ChainStore"
+    import {chainStore} from "$lib/stores/ChainStore";
     import Dashboard from "$lib/components/dashboard/Dashboard.svelte";
     import NavigationBar from "$lib/components/navigation/NavigationBar.svelte";
-    import {settingsStore} from "$lib/stores/SettingsStore";
-    import {chainStore} from "$lib/stores/ChainStore";
 
     const views: Map<ClientView, SvelteComponent> = new Map([
         [ClientView.Dashboard, Dashboard]
     ]);
 
     $: currentView = $settingsStore.currentView
+
 
     const socket = new WebSocket(`ws://${$settingsStore.connectionNode}`)
     socket.onopen = (event) => {
@@ -23,24 +23,35 @@
     }
 
 </script>
-<div id="app-container">
-    <div><NavigationBar></NavigationBar></div>
-    <div class="current-view"><svelte:component this={views.get(currentView)}/></div>
+<div class:collapsed={$settingsStore.collapsedNavigation} id="app-container" theme="{$settingsStore.chosenTheme.toLowerCase()}">
+    <div>
+        <NavigationBar></NavigationBar>
+    </div>
+    <div class="current-view">
+        <svelte:component this={views.get(currentView)}/>
+    </div>
 </div>
 
 <style>
     #app-container {
         display: grid;
-        grid-template-columns: max(15%, 200px) 1fr;
+        padding: .5rem;
+        gap: 1rem;
+        grid-template-columns: max(10%, 200px) 1fr;
         grid-template-rows: 1fr;
         height: 100vh;
-        font-family: "Helvetica Neue", sans-serif;
+        font-family: Inter, sans-serif;
+        box-sizing: border-box;
+        background: var(--background-color);
+        color: var(--primary-text-color);
+        overflow: auto;
+    }
 
-        background: #060d13;  /* fallback for old browsers */
-        color: white;
+    #app-container.collapsed{
+        grid-template-columns: 50px 1fr;
     }
 
     .current-view {
-        padding: 1rem;
+
     }
 </style>
