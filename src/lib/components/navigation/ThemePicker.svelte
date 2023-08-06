@@ -29,15 +29,15 @@
         margin: 0;
         list-style: none;
         gap: .5rem;
-        background-color: var(--lighter-background-color);
-        border: 1px solid var(--lighter-background-color);
+        background-color: var(--lmenu-background-color);
+        border: 1px solid var(--lmenu-background-color);
         border-radius: 5px;
     }
 
     #container li {
         padding: .5rem;
         margin: 0;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius1);
     }
 
     #container li div {
@@ -50,7 +50,7 @@
     }
 
     .selected {
-        background-color: var(--selection-color);
+        background-color: var(--tp-selection-color);
     }
 
     #light {

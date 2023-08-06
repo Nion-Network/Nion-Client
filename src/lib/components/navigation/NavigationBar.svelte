@@ -66,7 +66,7 @@
         gap: 1rem;
         padding: 1rem 0;
         box-sizing: border-box;
-        background-color: color-mix(in srgb, var(--lighter-background-color) 100%, transparent);
+        background-color: color-mix(in srgb, var(--lmenu-background-color) 100%, transparent);
         border: 1px solid color-mix(in srgb, var(--primary-text-color) 10%, transparent);
         border-radius: 5px;
         overflow: hidden;
@@ -144,7 +144,7 @@
     .collapse {
         padding: .25rem;
         background-color: var(--lightened-color);
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius1);
         border: 1px solid var(--darkened-color);
     }
 

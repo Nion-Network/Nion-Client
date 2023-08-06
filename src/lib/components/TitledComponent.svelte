@@ -16,7 +16,7 @@
         padding: 1rem;
         border-radius: 5px;
         border: 1px solid;
-        background-color: var(--lighter-background-color);
+        background-color: var(--lmenu-background-color);
         box-shadow: 0 0 2px 0 var(--primary-text-color);
     }
 

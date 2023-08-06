@@ -50,8 +50,9 @@
     .title {
         grid-column: 1/-1;
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: "Lato", sans-serif;
+        color: var(--secondary-text-color);
     }
 
     .title.containers {
@@ -64,10 +65,10 @@
         grid-template-columns: repeat(5, 1fr);
         padding: 0;
         grid-column: 1/-1;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius3);
         overflow: hidden;
-        border: 1px solid color-mix(in srgb, var(--accent-pink-color) 50%, transparent);
-        background-color: color-mix(in srgb, var(--accent-pink-color) 25%, transparent);
+        border: 1px solid var(--datacnt-background-border);
+        background-color: var(--datacnt-background-color);
     }
 
     .container :global(.summary > .card) {
@@ -77,14 +78,14 @@
     }
 
     .container :global(.summary > .card:not(:last-child)) {
-        border-right: 1px solid color-mix(in srgb, var(--accent-pink-color) 50%, transparent);
+        border-right: 1px solid var(--datacnt-background-border);
     }
 
     .container :global(.summary .numeric-value) {
         font-size: 1.25rem;
         margin-top: .5rem;
         font-weight: 500;
-        color: color-mix(in srgb, var(--accent-pink-color) 90%, var(--background-color));
+        color: var(--secondary-text-color);
     }
 
 </style>
@@ -180,7 +181,7 @@
         grid-column: 1/-1;
         font-family: "Roboto Light", sans-serif;
         color: var(--accent-color);
-        background-color: var(--lighter-background-color);
+        background-color: var(--lmenu-background-color);
         margin: 0;
         padding: 1rem;
         border-radius: var(--border-radius);

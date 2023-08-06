@@ -6,9 +6,9 @@
 
     export let isCollapsed: boolean = false
 
-    const selectedColor = "var(--selection-color)"
+    const selectedColor = "var(--lmenu-selection-color)"
     const defaultColor = "transparent"
-    $: opacity = isSelected ? 1.0 : 0.5
+    $: opacity = isSelected ? 1.0 : 0.75
 </script>
 
 <div class="container"
@@ -41,7 +41,7 @@
 
     .container.selected {
         background: var(--selectedColor);
-        border: 1px solid var(--selection-color);
+        border: 1px solid var(--lmenu-selection-color);
         color: var(--accent-color);
     }
 

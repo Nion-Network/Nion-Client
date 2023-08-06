@@ -37,7 +37,7 @@
         display: grid;
         padding: .5rem;
         gap: 1rem;
-        grid-template-columns: max(10%, 200px) 1fr;
+        grid-template-columns: max(10%, 260px) 1fr;
         grid-template-rows: 1fr;
         height: 100vh;
         font-family: Inter, sans-serif;

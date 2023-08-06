@@ -14,7 +14,7 @@
 <style>
     .card {
         padding: 1rem;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius1);
         border: 1px solid color-mix(in srgb, var(--primary-text-color) 20%, transparent);
         box-shadow: 0 0 5px 0 color-mix(in srgb, var(--primary-text-color) 5%, transparent);
     }
