@@ -21,7 +21,7 @@
                 <div class="numeric-value">{lastBlock?.slot.toLocaleString()} ({lastBlock.votes})</div>
             </CardComponent>
             <CardComponent title="Containers">
-                <div class="numeric-value">{(19920).toLocaleString()}</div>
+                <div class="numeric-value">{(containersOnline).toLocaleString()}</div>
             </CardComponent>
             <CardComponent title="Nodes">
                 <div class="numeric-value">{lastBlock?.dockerStatistics?.length}</div>

@@ -18,12 +18,29 @@
         console.log("New socket has been opened.")
     }
     socket.onmessage = (message) => {
-        const data: ChainBlock = JSON.parse(message.data)
-        chainStore.set(data)
+        const data: Message<any> = JSON.parse(message.data)
+        switch (data.topic) {
+            case Topic.Block:
+                chainStore.set(data.data as ChainBlock)
+                break;
+            case Topic.Logging:
+                console.log(data.data)
+        }
+    }
+
+    type Message<T> = {
+        topic: Topic,
+        data: T
+    }
+
+    enum Topic {
+        Logging = "Logging",
+        Block = "Block"
     }
 
 </script>
-<div class:collapsed={$settingsStore.collapsedNavigation} id="app-container" theme="{$settingsStore.chosenTheme.toLowerCase()}">
+<div class:collapsed={$settingsStore.collapsedNavigation} id="app-container"
+     theme="{$settingsStore.chosenTheme.toLowerCase()}">
     <div>
         <NavigationBar></NavigationBar>
     </div>
@@ -47,7 +64,7 @@
         overflow: auto;
     }
 
-    #app-container.collapsed{
+    #app-container.collapsed {
         grid-template-columns: 50px 1fr;
     }
 
