@@ -1,38 +1,14 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+# About
+Nion client is a GUI application aimed at Nion node operators, users, and general public as an explorer.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## For node operators
+Node operators can use the Nion-Client to monitor the status of their node, the applications they are task with running, and the local state of the network. 
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## For users
+Users of Nion are able to use the Nion-Client as an entry point to the network. They are able to deploy their applications to the network, monitor the status of their running applications, use the integrated wallet to process payments and analyze costs. The state of the network is particularly useful to determin the resource allocation available.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## For general public
+Nion-Client is able to provide basic functionality of a blockchain explorer with configurable history to be indexed. It can be built as a desktop application as well as a web app the team will host once the network is live.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
