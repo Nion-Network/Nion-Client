@@ -23,17 +23,17 @@
             <div class="icon"></div>
         </div>
     </div>
-    <div id="logo">
+    <div id="logo-container">
         <img alt="Nion Logo" src="logo.svg">
         {#if !isCollapsed}
-            <div id="title">Nion Network</div>
+            <div id="title">NION NETWORK</div>
         {/if}
     </div>
     <div id="status-container">
         <div id="status">
-            <div class="icon" style="mask-image: url('synced.svg')"></div>
+            <div class="icon" style="-webkit-mask-image: url('check-circle.svg')"></div>
             {#if !isCollapsed}
-                <div class="text">synced</div>
+                <div class="text">Synchronized</div>
             {/if}
         </div>
 
@@ -72,18 +72,24 @@
         overflow: hidden;
     }
 
-    #logo {
+    #logo-container {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    #logo-container img {
         width: 50%;
     }
 
-    #title {
-        font-size: 120%;
+    #logo-container #title {
+        font-size: 110%;
         text-align: center;
+        margin-top: 1rem;
+        font-weight: bold;
         font-family: Inter, sans-serif;
 
-        background: #03001e; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #ec38bc, #9d1bfa, #6256ff); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #ec38bc, #9d1bfa, #6256ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: var(--secondary-text-color);
 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -111,9 +117,9 @@
 
     #status .icon {
         padding: .5rem;
-        mask-repeat: no-repeat;
-        mask-size: 90%;
-        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 90%;
+        -webkit-mask-position: center;
         background-color: var(--darker-green-color);
     }
 
@@ -150,11 +156,11 @@
 
     .collapse .icon {
         padding: .5rem;
-        mask-repeat: no-repeat;
-        mask-size: 95%;
-        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 95%;
+        -webkit-mask-position: center;
         background-color: var(--accent-color);
-        mask-image: url("collapse-navigation.svg");
+        -webkit-mask-image: url("collapse-navigation.svg");
         transition: all .25s ease-in-out;
     }
 

@@ -15,7 +15,7 @@
      class:collapsed={isCollapsed}
      class:selected={isSelected}
      on:click style="--selectedColor: {selectedColor}; --defaultColor: {defaultColor}; opacity: {opacity}">
-    <div class="icon" style="mask-image: url({icon})"></div>
+    <div class="icon" style="-webkit-mask-image: url({icon})"></div>
     {#if !isCollapsed}
         <div class="text">{text}</div>
     {/if}
@@ -51,9 +51,9 @@
 
     .container .icon {
         padding: .5rem;
-        mask-repeat: no-repeat;
-        mask-size: 95%;
-        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 95%;
+        -webkit-mask-position: center;
         background-color: var(--primary-text-color);
     }
 

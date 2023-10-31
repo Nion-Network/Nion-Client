@@ -41,12 +41,12 @@
     }
 
     #container li div {
-        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
         background-repeat: no-repeat;
         background-position: center;
-        mask-position: center;
+        -webkit-mask-position: center;
         padding: .5rem;
-        mask-size: 95%;
+        -webkit-mask-size: 95%;
     }
 
     .selected {
@@ -54,12 +54,12 @@
     }
 
     #light {
-        mask-image: url("sun.svg");
+        -webkit-mask-image: url("sun.svg");
         background-color: var(--accent-color);
     }
 
     #dark {
-        mask-image: url("moon.svg");
+        -webkit-mask-image: url("moon.svg");
         background-color: var(--accent-color);
     }
 
